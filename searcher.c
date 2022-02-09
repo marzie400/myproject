@@ -16,7 +16,6 @@ char main(){
          
             printf("What word are you looking for? please write:\n");
             scanf("%s",&str);
-           //printf("%s",&str);
             printf("OK. I'm getting to work now ...\n");
             if ((strstr(temp, &str)) == NULL) {
             
