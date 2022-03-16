@@ -7,25 +7,31 @@ int i=0;
  int number_success=0;
 if (str){
               
-             printf("word is %s success\n",str);
+           // number_success=number_success+1;
+      // printf("%d success number: ",number_success);
+       printf("word is %s success\n",str);
+
       }         
    }
 char main(){
-   FILE *fp;
-   char str;
-   char temp[100000];
+  FILE *fp;
+  //int i=0;
+  char str;
+   //memset(str,0,1000 + 1);
+  char temp[100000];
   
     while ((fp = fopen("test.txt","r")) != NULL) {
           if (fp){
 		printf("oh! test.txt found!\n");
-	 }
+	 }//else {return 0;}
       (fgets(temp,100000,fp) != NULL);
             printf("What word are you looking for? please write:\n");
             scanf("%s",&str);
             printf("OK. I'm getting to work now ...\n");
             if ((strstr(temp,&str)) == NULL) {
                    printf("sorry! not found\n");
-                                    }
+                   //return 0;
+                      }
              else {
                      
                    set_output(&str);
